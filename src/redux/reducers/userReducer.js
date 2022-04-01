@@ -1,18 +1,15 @@
-import { GET_POSTS } from '../actions/types';
-
 const initialState = {
   user: null,
-  token: null,
+  logged: false,
 };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_POSTS:
+    case 'LOGIN':
       return {
         ...state,
-        user: action.payload,
+        logged: !state.logged,
       };
-
     default:
       return state;
   }

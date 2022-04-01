@@ -5,6 +5,7 @@
   --azul: #006dfb;
   --roxo: #41197f;
   --roxo-claro: #8958a3;
+  --roxo-escuro: #1c082f;
 }
 
 * {
@@ -52,19 +53,15 @@ code {
   width: 100%;
   margin: 0 auto;
   padding: 12px;
+
 }
 
 ::selection {
   background-color: var(--roxo-claro);
 }
 
-h1,
-h2,
-h3 {
+h1
+{
   color: var(--verde-claro);
 }
 
-@media (max-width: 800px) {
-  .wrapper {
-  }
-}

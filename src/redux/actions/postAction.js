@@ -11,13 +11,11 @@ export const getPost = (id) => {
 // get all posts
 export const getAllPosts = () => async (dispatch, getState) => {
   // faz a requisicao
-  console.log(getState());
-  const result = await fetch('https://jsonplaceholder.typicode.com/posts');
+  // console.log(getState());
+  const result = await fetch('https://jsonplaceholder.typicode.com/posts?_page=1&_limit=2');
   const data = await result.json();
   dispatch({
     type: GET_POSTS,
-    payload: {
-      posts: data,
-    },
+    posts: data,
   });
 };

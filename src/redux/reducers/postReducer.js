@@ -1,7 +1,7 @@
 import { GET_POSTS } from '../actions/types';
 
 const initialState = {
-  post: null,
+  selectPost: null,
   posts: [],
 };
 
@@ -10,9 +10,13 @@ const postReducer = (state = initialState, action) => {
     case GET_POSTS:
       return {
         ...state,
-        posts: action.payload,
+        posts: action.posts,
       };
-
+    case 'SELECT_POST':
+      return {
+        ...state,
+        selectPost: action.selectPost,
+      }
     default:
       return state;
   }

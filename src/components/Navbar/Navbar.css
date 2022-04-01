@@ -1,7 +1,9 @@
 nav {
-  background-color: var(--verde-escuro);
+  background-color: var(--roxo-escuro);
 }
 
 a {
   margin-right: 12px;
+  text-decoration: none;
+  font-size: 18px;
 }
